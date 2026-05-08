@@ -1,0 +1,62 @@
+# .gitignore — GlobalBusinessOne (Laravel + Docker)
+
+# ─── Archivos de Entorno (DATOS SENSIBLES) ───────────────────
+.env
+.env.local
+.env.production
+.env.staging
+.env.backup
+*.env
+
+# ─── Dependencias ────────────────────────────────────────────
+/vendor/
+/node_modules/
+
+# ─── Caché y compilados de Laravel ───────────────────────────
+/bootstrap/cache/*.php
+/storage/framework/cache/data/*
+/storage/framework/sessions/*
+/storage/framework/testing/*
+/storage/framework/views/*
+/storage/logs/*
+!/storage/logs/.gitkeep
+!/storage/framework/cache/data/.gitkeep
+!/storage/framework/sessions/.gitkeep
+!/storage/framework/testing/.gitkeep
+!/storage/framework/views/.gitkeep
+
+# ─── Assets compilados (Vite/Mix) ────────────────────────────
+/public/build/
+/public/hot
+/public/storage
+
+# ─── Archivos de IDE y editores ──────────────────────────────
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# ─── Archivos temporales PHP ─────────────────────────────────
+*.cache
+*.bak
+*.swp
+*.tmp
+
+# ─── Claves y certificados SSL ───────────────────────────────
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*.cer
+
+# ─── Docker: datos persistentes ──────────────────────────────
+# Los volúmenes de datos no deben versionarse
+docker/data/
+docker/volumes/
+
+# ─── Archivos de testing ─────────────────────────────────────
+.phpunit.result.cache
+coverage/
